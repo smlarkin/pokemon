@@ -32,6 +32,8 @@ export const usePokemonData = (pokeLimit = 0) => {
 
           setPokemonData((previousPokemon) => [...previousPokemon, ...results]);
         } catch (error) {
+          console.error(error);
+
           setError(error);
         } finally {
           setLoading(false);
