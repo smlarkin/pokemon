@@ -132,11 +132,15 @@ export const PokemonDetailsModal = ({
 
             <Text style={styles.textLabel}>{'Height'}</Text>
 
-            <Text style={styles.textValue}>{pokemonDetailsData.height}</Text>
+            <Text style={styles.textValue}>{`${(
+              +pokemonDetailsData.height / 10
+            ).toFixed(1)} m`}</Text>
 
             <Text style={styles.textLabel}>{'Weight'}</Text>
 
-            <Text style={styles.textValue}>{pokemonDetailsData.weight}</Text>
+            <Text style={styles.textValue}>{`${(
+              +pokemonDetailsData.weight / 10
+            ).toFixed(1)} kg`}</Text>
 
             <Text style={styles.textLabel}>{'Types'}</Text>
 
